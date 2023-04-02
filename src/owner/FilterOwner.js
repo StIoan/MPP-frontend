@@ -17,7 +17,7 @@ export default function FilterOwner() {
         <div className='mb-3'>
           <label htmlFor='Name' className='form-label'>Height</label>
           <input
-            type={"text"}
+            type={"int"}
             className="form-control"
             placeholder='The minimum height'
             name="height"
