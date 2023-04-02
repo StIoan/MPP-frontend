@@ -4,7 +4,6 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function Owner() {
     const [users, setUsers] = useState([])
-    const {ownerId} = useParams()
     useEffect(() => {
         loadUsers()
     },[])
