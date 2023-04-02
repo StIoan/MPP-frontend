@@ -23,6 +23,7 @@ function App() {
       component = <NavbarCar/>
       break
     default:
+      component = <Navbar/>
       break
   }
   return (
@@ -32,7 +33,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Owner/>}/>
         <Route exact path="/country" element={<Country/>}/>
-        <Route exact path="https://fantastic-zabaione-297ed8.netlify.app/car" element={<Car/>}/>
+        <Route exact path="/car" element={<Car/>}/>
         <Route exact path="/addOwner" element={<AddOwner/>}/>
         <Route exact path='/editOwner/:ownerId' element={<UpdateOwner/>}/>
       </Routes>
