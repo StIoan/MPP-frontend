@@ -22,6 +22,8 @@ function App() {
     case "/car":
       component = <NavbarCar/>
       break
+    default:
+      break
   }
   return (
     <div className="App">
