@@ -17,7 +17,7 @@ export default function FilterOwner() {
     <div className='row'>
       <div className='col-md-6 offsert-md-3 border rounded p-4 mt-2 shadow'>
         <h2 className='text-center m-4'>Filter Owner</h2>
-        {/* <form onSubmit={(e) => loadUsers(e)}> */}
+        <form>
         <div className='mb-3'>
           <label htmlFor='Name' className='form-label'>Height</label>
           <input
@@ -30,7 +30,7 @@ export default function FilterOwner() {
         </div>
         <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button>
         <Link className='btn btn-outline-danger mx-2' to='/'>Cancel</Link>
-        {/* </form> */}
+        </form>
       </div>
     </div>
     <div className='container'>
