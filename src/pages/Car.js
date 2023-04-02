@@ -7,7 +7,7 @@ export default function Country() {
         loadCars()
     },[])
     const loadCars=async() => {
-        const result=await axios.get("http://localhos:8080/cars")
+        const result=await axios.get("http://localhost:8080/cars")
         console.log(result.data)
         setCars(result.data)
     }
