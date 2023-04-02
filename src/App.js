@@ -9,6 +9,7 @@ import Country from './pages/Country';
 import NavbarCountry from './layout/NavbarCountry';
 import NavbarCar from './layout/NavbarCar';
 import Car from './pages/Car'
+import FilterOwner from './owner/FilterOwner';
 
 function App() {
   let component
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/car" element={<Car/>}/>
         <Route exact path="/addOwner" element={<AddOwner/>}/>
         <Route exact path='/editOwner/:ownerId' element={<UpdateOwner/>}/>
+        <Route exact path="/filterOwner" element={<FilterOwner/>}/>
       </Routes>
       </Router>
     </div>
