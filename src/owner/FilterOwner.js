@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 
 export default function FilterOwner() {
-    const {height} = useParams()
+    const height = ""
     const [users, setUsers] = useState([])
     useEffect(() => {
         loadUsers()
