@@ -22,7 +22,6 @@ export default function FilterOwner() {
             placeholder='The minimum height'
             name="height"
             value={height}
-            onChange={(e) => loadUsers(e)}
           />
         </div>
         <button className='btn btn-danger mx-2' onClick={() => loadUsers(height)}>Filter</button>
