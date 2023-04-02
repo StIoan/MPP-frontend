@@ -5,6 +5,9 @@ import { Link, useParams } from 'react-router-dom'
 export default function FilterOwner() {
     const {height} = useParams()
     const [users, setUsers] = useState([])
+    useEffect(() => {
+        loadUsers()
+    },[])
     const loadUsers = async(e) => {
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${e}`)
         setUsers(result.data)
