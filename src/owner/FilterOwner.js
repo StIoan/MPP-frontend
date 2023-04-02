@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 
 export default function FilterOwner() {
     const {height} = useParams()
     const [users, setUsers] = useState([])
+    useEffect(() => {
+        loadUsers()
+    },[])
     const loadUsers = async(e) => {
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${e}`)
         setUsers(result.data)
@@ -14,6 +17,7 @@ export default function FilterOwner() {
     <div className='row'>
       <div className='col-md-6 offsert-md-3 border rounded p-4 mt-2 shadow'>
         <h2 className='text-center m-4'>Filter Owner</h2>
+        <form onSubmit={(e) => loadUsers(e)}>
         <div className='mb-3'>
           <label htmlFor='Name' className='form-label'>Height</label>
           <input
@@ -24,8 +28,9 @@ export default function FilterOwner() {
             value={height}
           />
         </div>
-        <button className='btn btn-danger mx-2' onClick={() => loadUsers(height)}>Filter</button>
+        <button type='submit' className='btn btn-outline-dark'>Submit</button>
         <Link className='btn btn-outline-danger mx-2' to='/'>Cancel</Link>
+        </form>
       </div>
     </div>
     <div className='container'>
