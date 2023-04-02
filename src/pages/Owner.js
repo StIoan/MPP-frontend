@@ -8,7 +8,7 @@ export default function Owner() {
         loadUsers()
     },[])
     const loadUsers=async() => {
-        const result=await axios.get("https://13.48.127.50:8080/owners")
+        const result=await axios.get("http:localhost:8080/owners")
         setUsers(result.data)
     }
     const deleteOwner = async (ownerId) => {
