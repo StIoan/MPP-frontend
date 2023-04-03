@@ -3,12 +3,13 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 export default function FilterOwner() {
-    const height = ""
+    const [height, setHeight] = useState('')
     const [users, setUsers] = useState([])
     useEffect(() => {
         loadUsers()
-    },[])
+    },[]) 
     const loadUsers = async(e) => {
+        setHeight(e.target.value)
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${e}`)
         setUsers(result.data)
     }
@@ -26,9 +27,10 @@ export default function FilterOwner() {
             placeholder='The minimum height'
             name="height"
             value={height}
+            onChange={(e) => loadUsers(e)}
           />
         </div>
-        <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button>
+        {/* <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button> */}
         <Link className='btn btn-outline-danger mx-2' to='/'>Cancel</Link>
         </form>
       </div>
