@@ -21,7 +21,7 @@ export default function AddOwner() {
     navigate("/")
   }
 
-  return <div className='container'>
+  return <div className='container d-flex justify-content-center'>
     <div className='row'>
       <div className='col-md-6 offsert-md-3 border rounded p-4 mt-2 shadow'>
         <h2 className='text-center m-4'>Add Owner</h2>
