@@ -21,6 +21,7 @@ export default function Navbar() {
             </div>
             <Link className="btn btn-outline-light mx-1" to="/addOwner">Add user</Link>
             <Link className="btn btn-outline-light mx-1" to="/filterOwner">Filter user</Link>
+            <Link className="btn btn-outline-light mx-1" to="/sortHeightOwner">Sort user</Link>
         </div>
         </nav>
     </div>
