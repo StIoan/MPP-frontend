@@ -23,7 +23,7 @@ export default function AddOwner() {
 
   return <div className='container'>
     <div className='row'>
-      <div className='border rounded p-4 mt-2 shadow'>
+      <div className='col-md-6 offsert-md-3 border rounded p-4 mt-2 shadow'>
         <h2 className='text-center m-4'>Add Owner</h2>
         <form onSubmit={(e) => onSubmit(e)}>
         <div className='mb-3'>
