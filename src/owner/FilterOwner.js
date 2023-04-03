@@ -12,17 +12,21 @@ export default function FilterOwner() {
     const onInputChange = async(e) => {
         setHeight(e.target.value)
     }
-    const loadUsers = async(height) => {
+    const loadUsers = async() => {
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${height}`)
         setUsers(result.data)
-        navigate("/filterOwner")
+    }
+    const onFilter = async (e) => {
+      e.preventDefault();
+      loadUsers()
+      navigate("/filterOwner")
     }
 
   return <div className='container'>
     <div className='row'>
       <div className='col-md-6 offsert-md-3 border rounded p-4 mt-2 shadow'>
         <h2 className='text-center m-4'>Filter Owner</h2>
-        <form>
+        <form onSubmit={(e) => onFilter(e)}>
         <div className='mb-3'>
           <label htmlFor='Name' className='form-label'>Height</label>
           <input
@@ -34,7 +38,7 @@ export default function FilterOwner() {
             onChange={(e) => onInputChange(e)}
           />
         </div>
-        <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button>
+        <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers()}>Filter</button>
         <Link className='btn btn-outline-danger mx-2' to='/'>Cancel</Link>
         </form>
       </div>
