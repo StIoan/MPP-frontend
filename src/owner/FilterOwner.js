@@ -54,7 +54,6 @@ export default function FilterOwner() {
                         <th scope="col">Height</th>
                         <th scope="col">Weight</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
