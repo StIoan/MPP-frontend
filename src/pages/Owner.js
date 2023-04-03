@@ -12,7 +12,7 @@ export default function Owner() {
         setUsers(result.data)
     }
     const deleteOwner = async (ownerId) => {
-        await axios.delete(`https://13.48.127.50:8080/owners/${ownerId}`)
+        await axios.delete(`http:localhost:80/owners/${ownerId}`)
         loadUsers()
     }
 
