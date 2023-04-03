@@ -10,6 +10,7 @@ import NavbarCountry from './layout/NavbarCountry';
 import NavbarCar from './layout/NavbarCar';
 import Car from './pages/Car'
 import FilterOwner from './owner/FilterOwner';
+import SortOwner from './owner/SortOwner';
 
 function App() {
   let component
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/country" element={<Country/>}/>
         <Route exact path="/car" element={<Car/>}/>
         <Route exact path="/addOwner" element={<AddOwner/>}/>
+        <Route exact path="/sortOwnerHeight" element={<SortOwner/>}/>
         <Route exact path='/editOwner/:ownerId' element={<UpdateOwner/>}/>
         <Route exact path="/filterOwner" element={<FilterOwner/>}/>
       </Routes>
