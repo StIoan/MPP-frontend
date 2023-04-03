@@ -19,7 +19,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <Link className="btn btn-outline-light" to="/addOwner">Add user</Link>
+            <Link className="btn btn-outline-light ml-5" to="/addOwner">Add user</Link>
             <Link className="btn btn-outline-light" to="/filterOwner">Filter user</Link>
         </div>
         </nav>
