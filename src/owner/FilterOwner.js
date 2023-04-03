@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function FilterOwner() {
+    let navigate = useNavigate()
     const [height, setHeight] = useState('')
     const [users, setUsers] = useState([])
     useEffect(() => {
@@ -14,6 +15,7 @@ export default function FilterOwner() {
     const loadUsers = async(height) => {
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${height}`)
         setUsers(result.data)
+        navigate("/filterOwner")
     }
 
   return <div className='container'>
