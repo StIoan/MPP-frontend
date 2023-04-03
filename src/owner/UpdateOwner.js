@@ -18,7 +18,7 @@ export default function UpdateOwner() {
   }
   useEffect(() => {
     loadOwner()
-  })
+  },[])
   const onSubmit =async (e) => {
     e.preventDefault()
     await axios.put(`http:localhost:80/owners/${ownerId}`, owner)
