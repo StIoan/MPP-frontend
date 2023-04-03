@@ -8,8 +8,10 @@ export default function FilterOwner() {
     useEffect(() => {
         loadUsers()
     },[]) 
-    const loadUsers = async(e) => {
+    const onInputChange = async(e) => {
         setHeight(e.target.value)
+    }
+    const loadUsers = async(height) => {
         const result=await axios.get(`http:localhost:80/owners/filterByHeight/${height}`)
         setUsers(result.data)
     }
@@ -27,10 +29,10 @@ export default function FilterOwner() {
             placeholder='The minimum height'
             name="height"
             value={height}
-            onChange={(e) => loadUsers(e)}
+            onChange={(e) => onInputChange(e)}
           />
         </div>
-        {/* <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button> */}
+        <button type='submit' className='btn btn-outline-dark' onClick={() => loadUsers(height)}>Filter</button>
         <Link className='btn btn-outline-danger mx-2' to='/'>Cancel</Link>
         </form>
       </div>
