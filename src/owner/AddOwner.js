@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
 export default function AddOwner() {
   let navigate=useNavigate()

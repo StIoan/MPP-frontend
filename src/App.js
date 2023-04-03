@@ -11,6 +11,7 @@ import NavbarCar from './layout/NavbarCar';
 import Car from './pages/Car'
 import FilterOwner from './owner/FilterOwner';
 import SortOwner from './owner/SortOwner';
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
 function App() {
   let component
