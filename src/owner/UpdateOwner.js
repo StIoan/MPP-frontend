@@ -10,7 +10,8 @@ export default function UpdateOwner() {
     addres:"",
     height:"",
     weight:"",
-    description:""
+    description:"",
+    ownerId:""
   })
   const{name,addres,height,weight,description} = owner
   const onInputChange = (e) => {
@@ -41,7 +42,7 @@ export default function UpdateOwner() {
             className="form-control"
             placeholder='Enter owner name'
             name="name"
-            value={owner.name}
+            value={name}
             onChange={(e) => onInputChange(e)}
           />
         </div>
