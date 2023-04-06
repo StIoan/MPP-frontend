@@ -12,7 +12,6 @@ export default function UpdateOwner() {
     weight:"",
     description:""
   })
-  loadOwner()
   const{name,addres,height,weight,description} = owner
   const onInputChange = (e) => {
     setOwner({...owner, [e.target.name]:e.target.value})
@@ -29,6 +28,7 @@ export default function UpdateOwner() {
     const result = await axios.get(`api/owners/${ownerId}`)
     setOwner(result.data)
   }
+  loadOwner()
 
   return <div className='container'>
     <div className='row'>
