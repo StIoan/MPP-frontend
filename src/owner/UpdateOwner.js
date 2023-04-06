@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 
 export default function UpdateOwner() {
   let navigate=useNavigate()
-  const {ownerId} = useParams()
+  const {id} = useParams()
   const [owner, setOwner]=useState({
     name:"",
     addres:"",
@@ -13,7 +13,7 @@ export default function UpdateOwner() {
     description:"",
     ownerId:""
   })
-  const{name,addres,height,weight,description} = owner
+  const{name,addres,height,weight,description,ownerId} = owner
   const onInputChange = (e) => {
     setOwner({...owner, [e.target.name]:e.target.value})
   }
@@ -22,11 +22,11 @@ export default function UpdateOwner() {
   },[])
   const onSubmit =async (e) => {
     e.preventDefault()
-    await axios.put(`api/owners/${ownerId}`, owner)
+    await axios.put(`api/owners/${id}`, owner)
     navigate("/")
   }
   const loadOwner = async () => {
-    const result = await axios.get(`api/owners/${ownerId}`)
+    const result = await axios.get(`api/owners/${id}`)
     setOwner(result.data)
   }
 
