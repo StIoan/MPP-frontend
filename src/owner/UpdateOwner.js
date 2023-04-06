@@ -8,10 +8,11 @@ export default function UpdateOwner() {
   const [owner, setOwner]=useState({
     name:"",
     addres:"",
-    height: 0,
-    weight:0,
+    height:"",
+    weight:"",
     description:""
   })
+  loadOwner()
   const{name,addres,height,weight,description} = owner
   const onInputChange = (e) => {
     setOwner({...owner, [e.target.name]:e.target.value})
