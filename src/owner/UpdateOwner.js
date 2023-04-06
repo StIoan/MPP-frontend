@@ -4,16 +4,15 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 
 export default function UpdateOwner() {
   let navigate=useNavigate()
-  const {id} = useParams()
+  const {ownerId} = useParams()
   const [owner, setOwner]=useState({
     name:"",
     addres:"",
-    height:"",
-    weight:"",
-    description:"",
-    ownerId:""
+    height: 0,
+    weight:0,
+    description:""
   })
-  const{name,addres,height,weight,description,ownerId} = owner
+  const{name,addres,height,weight,description} = owner
   const onInputChange = (e) => {
     setOwner({...owner, [e.target.name]:e.target.value})
   }
@@ -22,11 +21,11 @@ export default function UpdateOwner() {
   },[])
   const onSubmit =async (e) => {
     e.preventDefault()
-    await axios.put(`api/owners/${id}`, owner)
+    await axios.put(`api/owners/${ownerId}`, owner)
     navigate("/")
   }
   const loadOwner = async () => {
-    const result = await axios.get(`api/owners/${id}`)
+    const result = await axios.get(`api/owners/${ownerId}`)
     setOwner(result.data)
   }
 
@@ -60,7 +59,7 @@ export default function UpdateOwner() {
         <div className='mb-3'>
           <label htmlFor='Height' className='form-label'>Height</label>
           <input
-            type={"int"}
+            type={"text"}
             className="form-control"
             placeholder='Enter owner height'
             name="height"
@@ -71,7 +70,7 @@ export default function UpdateOwner() {
         <div className='mb-3'>
           <label htmlFor='Weight' className='form-label'>Weight</label>
           <input
-            type={"int"}
+            type={"text"}
             className="form-control"
             placeholder='Enter owner weight'
             name="weight"
