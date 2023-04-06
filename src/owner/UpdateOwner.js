@@ -41,7 +41,7 @@ export default function UpdateOwner() {
             className="form-control"
             placeholder='Enter owner name'
             name="name"
-            value={name}
+            value={owner.name}
             onChange={(e) => onInputChange(e)}
           />
         </div>
