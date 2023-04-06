@@ -26,9 +26,9 @@ export default function UpdateOwner() {
   }
   const loadOwner = async () => {
     const result = await axios.get(`api/owners/${ownerId}`)
+    console.log(result.data)
     setOwner(result.data)
   }
-  window.onload = loadOwner()
 
   return <div className='container'>
     <div className='row'>
