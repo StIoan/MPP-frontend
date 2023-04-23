@@ -13,7 +13,7 @@ export default function Owner() {
         setUsers(result.data)
     }
     const deleteOwner = async (ownerId) => {
-        await axios.delete(`api/owners/${ownerId}`)
+        await axios.delete(`http:localhost:80/owners/${ownerId}`)
         loadUsers()
     }
 

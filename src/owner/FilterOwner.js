@@ -13,7 +13,7 @@ export default function FilterOwner() {
         setHeight(e.target.value)
     }
     const loadUsers = async() => {
-        const result=await axios.get(`api/owners/filterByHeight/${height}`)
+        const result=await axios.get(`http:localhost:80/owners/filterByHeight/${height}`)
         setUsers(result.data)
     }
     const onFilter = async (e) => {
