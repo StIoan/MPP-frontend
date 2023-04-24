@@ -7,7 +7,7 @@ export default function SortOwner() {
         loadUsers()
     },[])
     const loadUsers=async() => {
-        const result=await axios.get(`http:localhost:80/owners`)
+        const result=await axios.get(`api/owners`)
         result.data.sort((a, b) => {
             return a.height - b.height;
         })

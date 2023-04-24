@@ -21,11 +21,11 @@ export default function UpdateOwner() {
   },[])
   const onSubmit =async (e) => {
     e.preventDefault()
-    await axios.put(`http:localhost:80/owners/${ownerId}`, owner)
+    await axios.put(`api/owners/${ownerId}`, owner)
     navigate("/")
   }
   const loadOwner = async () => {
-    const result = await axios.get(`http:localhost:80/owners/${ownerId}`)
+    const result = await axios.get(`api/owners/${ownerId}`)
     console.log(result.data)
     setOwner(result.data)
   }
