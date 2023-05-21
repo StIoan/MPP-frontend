@@ -20,7 +20,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNav1">
+            <div class="collapse navbar-collapse mr-auto" id="navbarNav1">
               <Link className="btn btn-outline-light mx-3" to="/addOwner">Add user</Link>
               <Link className="btn btn-outline-light mx-3" to="/filterOwner">Filter user</Link>
               <Link className="btn btn-outline-light mx-3" to="/sortOwnerHeight">Sort user</Link>
