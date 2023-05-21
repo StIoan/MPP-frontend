@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collaps" data-bs-target="#navbarNav"></button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collaps" data-bs-target="#navbarNav1"></button>
         <div className="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
@@ -20,9 +20,11 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <Link className="btn btn-outline-light mx-3" to="/addOwner">Add user</Link>
-            <Link className="btn btn-outline-light mx-3" to="/filterOwner">Filter user</Link>
-            <Link className="btn btn-outline-light mx-3" to="/sortOwnerHeight">Sort user</Link>
+            <div class="collapse navbar-collapse" id="navbarNav1">
+              <Link className="btn btn-outline-light mx-3" to="/addOwner">Add user</Link>
+              <Link className="btn btn-outline-light mx-3" to="/filterOwner">Filter user</Link>
+              <Link className="btn btn-outline-light mx-3" to="/sortOwnerHeight">Sort user</Link>
+            </div>
         </div>
         </nav>
     </div>
