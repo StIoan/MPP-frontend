@@ -7,7 +7,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a class="nav-link active" href="/">User</a>
                 </li>
