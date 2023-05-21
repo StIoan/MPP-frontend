@@ -7,7 +7,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         {/* <div className="container-fluid"> */}
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                   <a class="nav-link active" href="/">User</a>
                 </li>
@@ -17,11 +17,14 @@ export default function Navbar() {
                 <li class="nav-item">
                   <a class="nav-link" href="/country">Country</a>
                 </li>
+                <Link className="btn btn-outline-light mx-1" to="/addOwner">Add user</Link>
+                <Link className="btn btn-outline-light mx-1" to="/filterOwner">Filter user</Link>
+                <Link className="btn btn-outline-light mx-1" to="/sortOwnerHeight">Sort user</Link>
               </ul>
             </div>
-            <Link className="btn btn-outline-light mx-1" to="/addOwner">Add user</Link>
+            {/* <Link className="btn btn-outline-light mx-1" to="/addOwner">Add user</Link>
             <Link className="btn btn-outline-light mx-1" to="/filterOwner">Filter user</Link>
-            <Link className="btn btn-outline-light mx-1" to="/sortOwnerHeight">Sort user</Link>
+            <Link className="btn btn-outline-light mx-1" to="/sortOwnerHeight">Sort user</Link> */}
         {/* </div> */}
         </nav>
     </div>
