@@ -5,6 +5,7 @@ export default function Navbar() {
   return (
     <div>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collaps" data-bs-target="#navbarNav"></button>
         <div className="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
