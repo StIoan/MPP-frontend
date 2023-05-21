@@ -18,10 +18,10 @@ export default function Navbar() {
                   <a class="nav-link" href="/country">Country</a>
                 </li>
               </ul>
-              <Link className="btn btn-outline-light mx-3" to="/addOwner">Add user</Link>
+            </div>
+            <Link className="btn btn-outline-light mx-3" to="/addOwner">Add user</Link>
             <Link className="btn btn-outline-light mx-3" to="/filterOwner">Filter user</Link>
             <Link className="btn btn-outline-light mx-3" to="/sortOwnerHeight">Sort user</Link>
-            </div>
         </div>
         </nav>
     </div>
